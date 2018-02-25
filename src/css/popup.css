@@ -1,0 +1,46 @@
+body {
+  width: 600px;
+  height: auto;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+body.datepicker {
+  height: 420px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container > div {
+  padding: 2px 0;
+}
+.container > div:nth-child(2n + 1) {
+  flex: 1 1 38%;
+  font-weight: bold;
+}
+.container > div:nth-child(2n) {
+  flex: 1 1 62%;
+}
+.container > div:nth-child(4n + 1),
+.container > div:nth-child(4n + 2) {
+  background: #ddd;
+}
+input {
+  width: 98%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif !important;
+
+}
+#togglePicker {
+  float: right;
+}
+#togglePicker img {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}

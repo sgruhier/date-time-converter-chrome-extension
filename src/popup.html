@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-  body {
-    width: 600px;
-    font-size: 16px;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container >div{
-    padding: 2px 0;
-  }
-  .container > div:nth-child(2n+1) {
-    flex: 1 1 50%;
-    font-weight: bold;
-  }
-  .container > div:nth-child(2n) {
-    flex: 1 1 50%;
-  }
-  .container > div:nth-child(4n+1), .container > div:nth-child(4n+2) {
-    background: #DDD;
-  }
-  input {
-    width: 98%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    font-size: 16px;
-  }
 
-</style>
-<script src="./popup.js"></script>
+<head>
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="css/flatpickr.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="js/moment.min.js"></script>
+  <script src="js/flatpickr.min.js"></script>
+  <script src="js/popup.js"></script>
 </head>
+
 <body>
   <div class="container">
-    <div>Selected Text</div><div>
+    <div>Selected text</div>
+    <div>
       <input type="text" id="selectedText">
     </div>
-    <div>Date in UTC</div><div id="utcDate"></div>
-    <div>Date in your current timezone<br> (<small id="tzString"></small>) </div><div id="timezoneDate"></div>
+
+    <div>Date in Epoch (ms)</div>
+    <div id="epochDate"></div>
+
+    <div>Date in UTC</div>
+    <div id="utcDate"></div>
+
+    <div>Date in your current timezone
+      <br> (
+      <small id="tzString"></small>) </div>
+    <div>
+      <span id="timezoneDate"></span>
+      <span id="togglePicker">
+        <img src="images/datePicker.png">
+      </span>
+    </div>
   </div>
 </body>
+
 </html>
